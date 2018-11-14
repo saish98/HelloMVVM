@@ -39,20 +39,20 @@ class SignupViewModel: BrokenRuleProtocole {
 extension SignupViewModel {
     
     private func validate() {
-        if firstName.isEmpty {
-            self.brokenRules.append(BrokenRule(propertyName: "First Name", message: "Invalid First Name"))
+        if !firstName.trimmingCharacters(in: .whitespaces).isValidInput() {
+            self.brokenRules.append(BrokenRule(propertyName: "First Name", message: "FirstName: A to Z Charaters Only\n"))
         }
         
-        if lastName.isEmpty {
-            self.brokenRules.append(BrokenRule(propertyName: "Last Name", message: "Invalid Last Name"))
+        if !lastName.trimmingCharacters(in: .whitespaces).isValidInput() {
+            self.brokenRules.append(BrokenRule(propertyName: "Last Name", message: "LastName: A to Z Charaters Only\n"))
         }
         
-        if email.isEmpty {
-            self.brokenRules.append(BrokenRule(propertyName: "Email", message: "Invalid Email"))
+        if !email.trimmingCharacters(in: .whitespaces).isValidEmail() {
+            self.brokenRules.append(BrokenRule(propertyName: "Email", message: "Invalid Email\n"))
         }
         
-        if password.isEmpty {
-            self.brokenRules.append(BrokenRule(propertyName: "Password", message: "Invalid Password"))
+        if password.trimmingCharacters(in: .whitespaces).isEmpty {
+            self.brokenRules.append(BrokenRule(propertyName: "Password", message: "Password cannot be empty"))
         }
     }
 }

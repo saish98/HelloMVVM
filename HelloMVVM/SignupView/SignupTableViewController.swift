@@ -56,25 +56,34 @@ class SignupTableViewController: UITableViewController {
     
     //MARK: Private Functions
     private func save() {
+       
         if self.signupViewModel.isValid {
             self.signupViewModel.apiSignup()
         }else {
-            print(self.signupViewModel.brokenRules)
-            var message = ""
-            for rule in self.signupViewModel.brokenRules {
-                message += "\(rule.message), "
-            }
-            
-            message = String(message.dropLast(2))
-            
-            let alert = UIAlertController(title: "Error", message: message, preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-
+           showAlert()
         }
         
+        showDataChangeInViewModel()
+    }
+    
+    private func showAlert() {
+      
+        var message = ""
+        for rule in self.signupViewModel.brokenRules {
+            message += "\(rule.message)"
+        }
+        
+        let alert = UIAlertController(title: "Oops", message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    private func showDataChangeInViewModel() {
+       
         //MARK: Example: Send data from View Model to View
         self.userViewModel.firstName.value = "Live Binding of First Name: \(self.textFieldFirstName.text!)"
+        
     }
     
     //MARK: Button Action
