@@ -11,13 +11,13 @@
 		87A51479219BF7DF0017F7BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87A51477219BF7DF0017F7BE /* Main.storyboard */; };
 		87A5147B219BF7E20017F7BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87A5147A219BF7E20017F7BE /* Assets.xcassets */; };
 		87A5147E219BF7E30017F7BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87A5147C219BF7E30017F7BE /* LaunchScreen.storyboard */; };
-		87A5148A219BFF580017F7BE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A51489219BFF580017F7BE /* User.swift */; };
 		87A5148C219BFF780017F7BE /* SignupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A5148B219BFF780017F7BE /* SignupTableViewController.swift */; };
-		87A5148E219BFF8B0017F7BE /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A5148D219BFF8B0017F7BE /* UserTableViewController.swift */; };
 		87A51490219C007E0017F7BE /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A5148F219C007E0017F7BE /* APIManager.swift */; };
 		87A51492219C00B60017F7BE /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A51491219C00B60017F7BE /* SignupViewModel.swift */; };
-		87A51494219C00C50017F7BE /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A51493219C00C50017F7BE /* UserViewModel.swift */; };
 		87A51498219C16E00017F7BE /* BindingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A51497219C16E00017F7BE /* BindingTextField.swift */; };
+		87BD7DCD219CA12000777257 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BD7DCC219CA12000777257 /* UserViewModel.swift */; };
+		87BD7DCF219CA14F00777257 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BD7DCE219CA14F00777257 /* Dynamic.swift */; };
+		87BD7DD1219CA15900777257 /* BrokenRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BD7DD0219CA15900777257 /* BrokenRule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,14 +27,14 @@
 		87A5147A219BF7E20017F7BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87A5147D219BF7E30017F7BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		87A5147F219BF7E30017F7BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		87A51489219BFF580017F7BE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		87A5148B219BFF780017F7BE /* SignupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupTableViewController.swift; sourceTree = "<group>"; };
-		87A5148D219BFF8B0017F7BE /* UserTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewController.swift; sourceTree = "<group>"; };
 		87A5148F219C007E0017F7BE /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		87A51491219C00B60017F7BE /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
-		87A51493219C00C50017F7BE /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		87A51497219C16E00017F7BE /* BindingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingTextField.swift; sourceTree = "<group>"; };
 		87BD7DCB219C46B500777257 /* HelloMVVM.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HelloMVVM.entitlements; sourceTree = "<group>"; };
+		87BD7DCC219CA12000777257 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		87BD7DCE219CA14F00777257 /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
+		87BD7DD0219CA15900777257 /* BrokenRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrokenRule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +70,6 @@
 				87BD7DCB219C46B500777257 /* HelloMVVM.entitlements */,
 				87A51473219BF7DF0017F7BE /* AppDelegate.swift */,
 				87A51496219C00E70017F7BE /* SignupView */,
-				87A51495219C00CF0017F7BE /* UserListView */,
 				87A51499219C275C0017F7BE /* Entity */,
 				87A5149A219C276E0017F7BE /* API */,
 				87A5149B219C27850017F7BE /* Utility */,
@@ -82,20 +81,12 @@
 			path = HelloMVVM;
 			sourceTree = "<group>";
 		};
-		87A51495219C00CF0017F7BE /* UserListView */ = {
-			isa = PBXGroup;
-			children = (
-				87A5148D219BFF8B0017F7BE /* UserTableViewController.swift */,
-				87A51493219C00C50017F7BE /* UserViewModel.swift */,
-			);
-			path = UserListView;
-			sourceTree = "<group>";
-		};
 		87A51496219C00E70017F7BE /* SignupView */ = {
 			isa = PBXGroup;
 			children = (
 				87A5148B219BFF780017F7BE /* SignupTableViewController.swift */,
 				87A51491219C00B60017F7BE /* SignupViewModel.swift */,
+				87BD7DCC219CA12000777257 /* UserViewModel.swift */,
 			);
 			path = SignupView;
 			sourceTree = "<group>";
@@ -103,7 +94,6 @@
 		87A51499219C275C0017F7BE /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				87A51489219BFF580017F7BE /* User.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -120,6 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				87A51497219C16E00017F7BE /* BindingTextField.swift */,
+				87BD7DCE219CA14F00777257 /* Dynamic.swift */,
+				87BD7DD0219CA15900777257 /* BrokenRule.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -210,12 +202,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				87A51492219C00B60017F7BE /* SignupViewModel.swift in Sources */,
-				87A5148A219BFF580017F7BE /* User.swift in Sources */,
+				87BD7DCD219CA12000777257 /* UserViewModel.swift in Sources */,
 				87A51474219BF7DF0017F7BE /* AppDelegate.swift in Sources */,
+				87BD7DCF219CA14F00777257 /* Dynamic.swift in Sources */,
+				87BD7DD1219CA15900777257 /* BrokenRule.swift in Sources */,
 				87A51490219C007E0017F7BE /* APIManager.swift in Sources */,
-				87A5148E219BFF8B0017F7BE /* UserTableViewController.swift in Sources */,
 				87A51498219C16E00017F7BE /* BindingTextField.swift in Sources */,
-				87A51494219C00C50017F7BE /* UserViewModel.swift in Sources */,
 				87A5148C219BFF780017F7BE /* SignupTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
